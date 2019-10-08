@@ -8,6 +8,12 @@ It's quick, possibly dirty.
 
 Tested and validated on `CentOS Linux release 7.7.1908`.
 
+```sh
+wget https://raw.githubusercontent.com/ab-a/nginx-autoinstall-centos/master/nginx-autoinstall.sh
+chmod +x nginx-autoinstall.sh
+./nginx-autoinstall.sh
+```
+
 # Modifications
 #### File `nginx-autoinstall.sh` :
 ```
