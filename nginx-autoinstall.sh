@@ -174,7 +174,7 @@ case $OPTION in
 
 		# Dependencies
 		yum check-update
-		yum install -y gcc gcc-c++ make ca-certificates wget curl autoconf unzip automake libtool tar git zlib-devel uuid-devel libxml2-devel libxslt-devel uuid-devel openssl-devel pcre pcre-devel libuuid-devel libmaxminddb-devel
+		yum install -y gcc gcc-c++ make ca-certificates wget curl autoconf unzip automake libtool tar git zlib-devel uuid-devel libxml2-devel libxslt-devel uuid-devel openssl-devel pcre pcre-devel libuuid-devel libmaxminddb-devel patch
 
 		if [[ "$MODSEC" = 'y' ]]; then
 				apt-get install -y apt-utils libcurl4-openssl-dev libgeoip-dev liblmdb-dev libpcre++-dev libyajl-dev pkgconf
