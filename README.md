@@ -67,6 +67,8 @@ chmod +x nginx-autoinstall.sh
 
 # Original README.md
 
+# nginx-autoinstall
+
 Compile and install Nginx from source with optional modules.
 
 ![screenshot](https://user-images.githubusercontent.com/11699655/33800227-29565ef6-dd3c-11e7-9967-7232ecd36ee4.png)
@@ -74,9 +76,8 @@ Compile and install Nginx from source with optional modules.
 ## Compatibility
 
 * x86, x64, arm*
-* ~~Debian 8 and later~~
-* ~~Ubuntu 16.04 and later~~
-* CentOS Linux release 7.7
+* Debian 8 and later
+* Ubuntu 16.04 and later
 
 ## Features
 
@@ -99,8 +100,16 @@ Compile and install Nginx from source with optional modules.
 * [ngx_cache_purge](https://github.com/FRiCKLE/ngx_cache_purge) (Purge content from FastCGI, proxy, SCGI and uWSGI caches)
 * [ngx-fancyindex](https://github.com/aperezdc/ngx-fancyindex) (Fancy indexes module)
 * [nginx-dav-ext-module](https://github.com/arut/nginx-dav-ext-module) (nginx WebDAV PROPFIND,OPTIONS,LOCK,UNLOCK support)
-* [nginx-module-vts](https://github.com/vozlt/nginx-module-vts) (Nginx virtual host traffic status module )
-  - See install instructions: [nginx-module-vts#installation](https://github.com/vozlt/nginx-module-vts#installation) 
+* [nginx-module-vts](https://github.com/vozlt/nginx-module-vts) (Nginx virtual host traffic status module)
+  * See install instructions: [nginx-module-vts#installation](https://github.com/vozlt/nginx-module-vts#installation)
+* [ModSecurity from source](https://github.com/SpiderLabs/ModSecurity) (ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx)
+  * [ModSecurity-nginx](https://github.com/SpiderLabs/ModSecurity-nginx) (ModSecurity v3 Nginx Connector)
+* HTTP/3 using [Cloudflare's patch](https://blog.cloudflare.com/experiment-with-http-3-using-nginx-and-quiche/) with [Quiche](https://github.com/cloudflare/quiche) and [BoringSSL](https://github.com/google/boringssl).
+* [testcookie-nginx-module](https://github.com/kyprizel/testcookie-nginx-module) (testcookie-nginx-module is a simple robot mitigation module using cookie based challenge/response.)
+  * See example configuration [testcookie-nginx-module#example-configuration](https://github.com/kyprizel/testcookie-nginx-module#example-configuration) 
+* [lua-nginx-module](https://github.com/openresty/lua-nginx-module) (Embed the power of Lua into Nginx HTTP Servers)
+  * [luajit2](https://github.com/openresty/luajit2) (OpenResty's maintained branch of LuaJIT)
+  * [ngx_devel_kit](https://github.com/simplresty/ngx_devel_kit) (Nginx Development Kit (NDK))
 
 ## Install Nginx
 
@@ -131,6 +140,12 @@ To update Nginx, run the script and install Nginx again. It will overwrite curre
 The update feature downloads the script from this repository, and overwrites the current `nginx-autoinstall.sh` file in the working directory. This allows you to get the latest features, bug fixes, and module versions automatically.
 
 ![update](https://lut.im/uQSSVxAz09/zhZRuvJjZp2paLHm.png)
+
+## Install Bad Bot Blocker
+
+This option will install [Nginx Bad Bot and User-Agent Blocker.](https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker) (Nginx Bad Bot and User-Agent Blocker, Spam Referrer Blocker, Anti DDOS, Bad IP Blocker and Wordpress Theme Detector Blocker)
+
+See additional steps to add a cron job for automatic updating, customization and testing in the link above.
 
 ## Headless use
 
