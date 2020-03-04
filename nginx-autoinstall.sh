@@ -173,7 +173,7 @@ case $OPTION in
 		mkdir -p /usr/local/src/nginx/modules
 
 		# Dependencies
-		yum update
+		yum check-update
 		yum install -y gcc gcc-c++ make ca-certificates wget curl autoconf unzip automake libtool tar git zlib-devel uuid-devel libxml2-devel libxslt-devel uuid-devel openssl-devel pcre pcre-devel libuuid-devel libmaxminddb-devel
 
 		if [[ "$MODSEC" = 'y' ]]; then
